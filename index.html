@@ -1,0 +1,92 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, rgb(49, 146, 153), rgb(205, 219, 162));
+      }
+    
+      .box {
+        width: 300px;
+        background-color: #559292;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-size: 18px;
+      }
+    
+      .input-label {
+        display: block;
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-size: 14px;
+        text-align: left;
+      }
+    
+      .input-field {
+        width: 90%;
+        padding: 10px;
+        border: none;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+      }
+      button{
+        border-radius: 10px;
+        border: none;
+        padding: 6px;
+        margin: 10px;
+      }
+    </style>
+    <title>Calculator</title>
+    </head>
+    <body>
+      <div class="box">
+        <label class="input-label" for="name">Enter a String:</label>
+        <input class="input-field" type="text" id="num1" name="name" placeholder="Enter a String">
+    
+    
+        <button onclick="length()">Find Length</button>
+        <button onclick="replace()">Replace</button>
+        <button onclick="upper()">To Uppercase</button>
+        <button onclick="lower()">To Lowercase</button>
+        <p id="result">Output</p>
+      </div>
+    
+      <script>
+        function length(){
+            const text = document.getElementById("num1").value;
+            document.getElementById("result").innerHTML = text.length;
+        }
+        function replace(){
+            const text =document.getElementById("num1").value;
+            document.getElementById("result").innerHTML = text.replace(text,"malu");
+
+        }
+        function upper(){
+            const text = document.getElementById("num1").value;
+            document.getElementById("result").innerHTML = text.toUpperCase();
+        }
+        function lower(){
+            const text = document.getElementById("num1").value;
+            document.getElementById("result").innerHTML = text.toLowerCase();
+        }
+
+      </script>
+    
+    </body>
+    </html>
+</body>
+</html>
